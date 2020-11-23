@@ -41,7 +41,11 @@ class MailgunProvider implements ProviderInterface
      */
     public function sendEmail(string $recipient, string $subject, string $message): bool
     {
-        $sender = sprintf('%s <%s>', $this->config['senderName'], $this->config['senderddress']);
+        $sender = sprintf(
+            '%s <%s>',
+            $this->config['senderName'],
+            $this->config['senderAddress']
+        );
 
         $data = [
             'from'    => $sender,

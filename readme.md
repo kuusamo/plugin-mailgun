@@ -15,7 +15,7 @@ Usage
 
 Install it in `index.php` of your project.
 
-    $mailgunConfig = new MailgunConfig([
+    $mailgunConfig = new Kuusamo\Plugin\Mailgun\MailgunConfig([
         'senderAddress' => 'test@example.com',
         'senderName' => 'Kuusamo',
         'senderReplyAddress' => 'reply@example.com', // optional
@@ -23,4 +23,6 @@ Install it in `index.php` of your project.
         'domain' => 'kuusamo.org'
     ]);
 
-    Kuusamo\Plugin\Mailgun\MailgunFactory::create($mailgunConfig);
+    $provider = Kuusamo\Plugin\Mailgun\MailgunFactory::create($mailgunConfig);
+
+    Kuusamo\Vle\Service\Email\EmailFactory::setProvider($provider);
