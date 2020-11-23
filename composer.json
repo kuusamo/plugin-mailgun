@@ -1,0 +1,28 @@
+{
+    "name": "kuusamo/plugin-mailgun",
+    "tyoe": "library",
+    "description": "Mailgun plugin for Kuusamo",
+    "homepage": "https://github.com/kuusamo/plugin-mailgun",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Worfolk",
+            "email": "chris@worfolk.co.uk",
+            "homepage": "http://www.worfolk.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kuusamo\\Plugin\\Mailgun\\": "src/"
+        }
+    },
+    "require": {
+        "mailgun/mailgun-php": "3.*",
+        "kriswallsmith/buzz": "1.*",
+        "nyholm/psr7": "1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "7.*",
+        "squizlabs/php_codesniffer": "2.*"
+    }
+}
