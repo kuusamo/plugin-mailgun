@@ -2,9 +2,10 @@
 
 namespace Kuusamo\Plugin\Mailgun;
 
+use Kuusamo\Vle\Service\Email\Provider\ProviderInterface;
 use Mailgun\Mailgun;
 
-class MailgunProvider
+class MailgunProvider implements ProviderInterface
 {
     /**
      * Configuration.
