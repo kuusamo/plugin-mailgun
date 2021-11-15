@@ -3,6 +3,7 @@
 namespace Kuusamo\Plugin\Mailgun\Test;
 
 use Kuusamo\Plugin\Mailgun\MailgunConfig;
+use Kuusamo\Plugin\Mailgun\Exception\ConfigException;
 use PHPUnit\Framework\TestCase;
 
 class MailgunConfigTest extends TestCase
@@ -19,11 +20,10 @@ class MailgunConfigTest extends TestCase
         $this->assertInstanceOf('Kuusamo\Plugin\Mailgun\MailgunConfig', $config);
     }
 
-    /**
-     * @expectedException Kuusamo\Plugin\Mailgun\Exception\ConfigException
-     */
     public function testInvalidOption()
     {
+        $this->expectException(ConfigException::class);
+
         $config = new MailgunConfig([
             'senderAddress' => 'test@example.com',
             'senderName' => 'Kuusamo',
@@ -33,11 +33,10 @@ class MailgunConfigTest extends TestCase
         ]);
     }
 
-    /**
-     * @expectedException Kuusamo\Plugin\Mailgun\Exception\ConfigException
-     */
     public function testMissingOption()
     {
+        $this->expectException(ConfigException::class);
+
         $config = new MailgunConfig([
             'senderEmail' => 'test@example.com',
             'senderName' => 'Kuusamo',
