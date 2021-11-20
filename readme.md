@@ -4,7 +4,7 @@ Mailgun plugin
 [![Latest Stable Version](https://poser.pugx.org/kuusamo/plugin-mailgun/v)](//packagist.org/packages/kuusamo/plugin-mailgun)
 [![Total Downloads](https://poser.pugx.org/kuusamo/plugin-mailgun/downloads)](//packagist.org/packages/kuusamo/plugin-mailgun)
 [![License](https://poser.pugx.org/kuusamo/plugin-mailgun/license)](//packagist.org/packages/kuusamo/plugin-mailgun)
-[![Build Status](https://travis-ci.org/kuusamo/plugin-mailgun.svg?branch=master)](https://travis-ci.org/kuusamo/plugin-mailgun)
+[![Build Status](https://app.travis-ci.com/kuusamo/plugin-mailgun.svg?branch=master&status=errored)](https://app.travis-ci.com/github/kuusamo/plugin-mailgun)
 
 This plugin adds Mailgun email integration to Kuusamo.
 
