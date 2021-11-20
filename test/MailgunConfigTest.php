@@ -17,7 +17,7 @@ class MailgunConfigTest extends TestCase
             'domain' => 'kuusamo.org'
         ]);
 
-        $this->assertInstanceOf('Kuusamo\Plugin\Mailgun\MailgunConfig', $config);
+        $this->assertInstanceOf(MailgunConfig::class, $config);
     }
 
     public function testInvalidOption()

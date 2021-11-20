@@ -2,6 +2,7 @@
 
 namespace Kuusamo\Plugin\Mailgun\Test;
 
+use Kuusamo\Plugin\Mailgun\MailgunConfig;
 use Kuusamo\Plugin\Mailgun\MailgunProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -9,7 +10,7 @@ class MailgunProviderTest extends TestCase
 {
     public function testSendEmail()
     {
-        $configMock = $this->createMock('Kuusamo\Plugin\Mailgun\MailgunConfig');
+        $configMock = $this->createMock(MailgunConfig::class);
         $configMock->method('offsetGet')->willReturn('abc123');
 
         $messageMock = $this->createMock('Mailgun\Api\Message');
@@ -19,6 +20,13 @@ class MailgunProviderTest extends TestCase
         $mailgunMock->method('messages')->willReturn($messageMock);
 
         $provider = new MailgunProvider($configMock, $mailgunMock);
-        $provider->sendEmail('recipient@example.com', 'Subject', 'Message');
+
+        $result = $provider->sendEmail(
+            'recipient@example.com',
+            'Subject',
+            'Message'
+        );
+
+        $this->assertTrue($result);
     }
 }
