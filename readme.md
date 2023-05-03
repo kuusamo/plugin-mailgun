@@ -31,7 +31,6 @@ Install it in `index.php` of your project.
     ]);
 
     $provider = Kuusamo\Plugin\Mailgun\MailgunFactory::create($mailgunConfig);
-
     Kuusamo\Vle\Service\Email\EmailFactory::setProvider($provider);
 
 
